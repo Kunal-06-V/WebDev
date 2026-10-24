@@ -178,24 +178,288 @@
 // console.log(mul10);
 
 
+//  * PQ 2 minimum num
+// function getMini(nums) {
+//    let min = nums.reduce((acc, curr) => {
+//       // if (acc > curr) {
+//       //    return acc = curr;
+//       // }
+//       if(acc < curr) {
+//          return acc;
+//       }else{
+//          return curr
+//       }
 
-function getMini(nums) {
-   let min = nums.reduce((acc, curr) => {
-      // if (acc > curr) {
-      //    return acc = curr;
-      // }
-      if(acc < curr) {
-         return acc;
-      }else{
-         return curr
-      }
-
-   });
-   return min;
-}
-
-
-let nums = [10, 20, 30, 40, 5];
+//    });
+//    return min;
+// }
 
 
-console.log(getMini(nums));
+// let nums = [10, 20, 30, 40, 5];
+
+
+// console.log(getMini(nums));
+
+
+// ! Some method : 
+// ? Atleast one should be correct 
+
+// const students = [
+//     { name: "Amit", marks: 45 },
+//     { name: "Kunal", marks: 92 },
+//     { name: "Riya", marks: 55 },
+//     { name: "Neha", marks: 81 }
+// ];
+
+// const topper = students.some((el)=>{
+//    return el.marks > 90;
+// })
+
+// console.log(topper);
+
+
+
+// ! Default parameter :
+// ? Giving a default value to the arguments.
+
+// function sum(a , b =3 ){
+//    return a + b;
+// }
+// console.log(sum(1 , 9));
+// console.log(sum(4));
+
+// ? user Created 
+// function createUser(name = "Guest", role = "Student"){
+//    return "Name: "+ name +", "+"Role: "+role;
+// }
+
+// console.log(createUser("Kunal", "Developer"));
+// console.log(createUser());
+// console.log(createUser("Rahul"));
+
+
+// ! Spread : 
+// ? Expands an iterable into multiple values.
+
+
+// const java = ["Variables", "Loops", "Functions"];
+// const js = ["Arrays", "Objects"];
+
+// const lang = [...java,...js]
+// console.log(lang);
+
+// const updatedTopics = ["DOM",...java,...js,"React"];
+// console.log(updatedTopics);
+
+// const student = {
+//     name: "Amit",
+//     age: 20,
+//     course: "Computer Engineering"
+// };
+
+// const extraInfo = {
+//     age: 21,
+//     city: "Mumbai"
+// };
+// // const profile = {...extraInfo,...student};
+// const profile = {...student,...extraInfo};
+
+// console.log(profile);
+
+
+// ! Spread n Array Literals :
+
+// let arr = [1, 2, 3, 4, 5];
+// let newArr = [...arr];
+
+
+// let chars = [..."hello"];
+
+// console.log(chars);
+
+// let odd = [1, 3, 5, 7, 9];
+// let even =[2, 4, 6, 8,10];
+
+// let nums = [...odd , ...even];
+// console.log(nums);
+
+
+// ! Spread in Object literals 
+
+// const data = {
+//    email: "ironman@gmail.com",
+//    password: "abcd",
+// };
+
+// const dataCopy = { ...data, id: 123, country: "India" };
+// console.log(dataCopy);
+
+// let arr = [1, 2, 3, 4, 5];
+// let obj1 = {...arr};
+
+// console.log(obj1); // index = key and element  = value  0 : 1 , 1 : 2 ....
+
+
+// ! rest 
+// ? Allows a Function to take an indefinite number of arguments and bundle them in an array .
+
+// function sum(...args){
+   // *arguments
+//    for(let i = 0  ; i < args.length;i++){
+//       console.log("you gave us: ",args[i]);
+//    }
+// }
+
+// sum(1, 2, 3, 4);
+
+// function min(a , b,c, d){
+//    console.log(arguments);
+//    console.log(arguments.length);
+//    let mini = arguments.push(1);
+   // console.log(mini);  // *error always becs we can not use method of array in cottection we use it on array only
+
+   
+// }
+
+// min(1 ,2, 3, 4, 5);
+
+// function sum(){
+//    arguments.reduce((sum , el)=>{
+//       return sum + el;  // * we can not use arguments 
+//    })
+// }
+
+// ? for sum 
+// function sum(...args){
+//  return  args.reduce((sum , el)=>
+//        sum + el
+//    );
+// }
+
+// ? for min and msg 
+// function min(msg , ...args){
+//    console.log(msg);
+   
+//  return  args.reduce((min , el)=> {
+//    if(min > el){
+//     return  el;
+//    }else {
+//       return min;
+//    }
+//  }   
+//    );
+// }
+
+// console.log(sum(1, 2, 3));
+// console.log(min("hello",1, 2, 3));
+
+
+// const frontend = ["HTML", "CSS"];
+// const backend = ["Node.js", "Express"];
+
+// const fullStack = [...frontend,"React",...backend];
+// console.log(fullStack);
+
+// function multiplyAll(...num){
+//    return num.reduce((total , num) => {
+//        return total * num;
+//    })
+// }
+
+// console.log(multiplyAll(2, 3));       // 6
+// console.log(multiplyAll(2, 3, 4));    // 24
+// console.log(multiplyAll(2, 3, 4, 5)); // 120
+
+// ! Destructuring : 
+
+// ? Storing values of array into multiple variables 
+
+// let names = ["tony", "bruce", "peter", "steve"];
+// let winner = names[0];
+// let runnerup = names[1];
+// let secRunnerUp = names[2]; //? it  is two big to write 
+
+// let [winner , runnerup , ...others] = names;
+
+// console.log([winner, runnerup]);
+// console.log(others);
+
+// const student = {
+//    name:"kunal",
+//    age:14,
+//    class:9,
+//    subjects:["hindi","english","math","science"],
+//    username: "karan@123",
+//    password: 1231,
+//    city:"pune",
+// }
+
+// let {username: user  , password:secret,city: place ="Mumbai"} = student;
+
+// console.log({user, secret ,place });
+
+
+
+// const languages = ["Java", "JavaScript", "Python", "C++"];
+
+// const [firstLanguage , secondLanguage , ...otherLanguages]= languages;
+
+// console.log(firstLanguage);
+// console.log(secondLanguage);
+// console.log(otherLanguages);
+ 
+
+
+// const developer = {
+//     name: "Kunal",
+//     role: "Software Engineer",
+//     city: "Mumbai"
+// };
+
+// const {name : developerName, role , country = "India"} = developer;
+
+// console.log(developerName);
+// console.log(role);
+// console.log(country);
+
+
+// function greet(name = "Guest") {
+//     return `Hello ${name}`;
+// }
+
+// console.log(greet());//? hello guest 
+// console.log(greet(undefined)); //? hello guest 
+// console.log(greet(null));  //? hellp null
+
+
+
+// function sumAll(...num){
+//      return num.reduce((total, num)=>{
+//      return  total + num;
+//      },0)
+// }
+// console.log(sumAll(1, 2, 3)); // 6
+// console.log(sumAll(5, 10));   // 15
+// console.log(sumAll());        // 0
+
+// const skills = ["HTML", "CSS", "JavaScript", "React"];
+
+// const [first, ...remaining] = skills;
+
+// console.log(first);
+// console.log(remaining);
+
+// const user = {
+//     name: "Riya",
+//     role: "Developer"
+// };
+
+// const {
+//     name: username,
+//     country = "India",
+//     ...details
+// } = user;
+
+// console.log(username);
+// console.log(country);
+// console.log(details);
