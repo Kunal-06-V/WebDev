@@ -463,3 +463,77 @@
 // console.log(username);
 // console.log(country);
 // console.log(details);
+
+
+// TODO Revision Question 
+
+// ? Q1 
+
+
+// const numbers = [2, 3, 4, 5];
+
+// const squared = numbers.map((n)=>{
+//    return n * n;
+   
+// })
+// console.log(squared);
+
+// const sum = squared.reduce((acc , curr)=>{
+//     return acc + curr;
+// })
+// console.log(sum);
+
+// const avg = sum / squared.length;
+// console.log(avg);
+
+
+// ? Q2 
+
+// const numbers = [10, 20, 30, 40, 50];
+
+// const updatedNumbers = numbers.map((curr)=>{
+//    return curr + 5;
+// });
+// console.log(updatedNumbers);
+
+
+// ? Q3 
+
+// const words = ["javascript", "react", "node.js", "python"];
+
+// const uppercaseWords = words.map((curr)=>{
+//   return curr.toUpperCase();
+// })
+// console.log(uppercaseWords);
+
+
+// ? Q4 
+
+// function doubleAndReturnArgs(arr, ...args){
+//     let double =  args.map((el)=>{
+//     return el * 2;
+//    })
+//    let combineArr = [...arr,...double];
+//    return combineArr;
+// }
+// console.log(doubleAndReturnArgs([1, 2, 3], 4, 5));
+// console.log(doubleAndReturnArgs([10, 20], 1, 2, 3));
+
+
+// ? Q5 
+
+// function mergeObjects (obj1 , obj2){
+//     const combineData = {...obj1,...obj2};
+//     return combineData;
+// }
+// const obj1 = {
+//     name: "Kunal",
+//     age: 21
+// };
+
+// const obj2 = {
+//    age:22,
+//     city: "Mumbai",
+//     role: "Developer"
+// };
+// console.log(mergeObjects(obj1, obj2));
