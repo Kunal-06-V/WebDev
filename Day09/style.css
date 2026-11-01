@@ -1,7 +1,19 @@
-body {
+
+.red {
+  color: red;
+}
+.blue {
+  color: blue;
+}
+.div {
+  border: 1px solid black;
+  background-color: pink;
+
+}
+/* body {
   font-family: Arial;
 }
-
+.
 .green {
   color:green;
   text-decoration:underline black wavy;
@@ -34,4 +46,4 @@ body {
 
 #description {
   background-color: antiquewhite;
-}
+} */

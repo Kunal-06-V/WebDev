@@ -190,18 +190,76 @@
 // children
 // previousElementSibling/nextElementSibling
 
-let parent = document.querySelector("#parent");
-let first = document.querySelector(".first");
+// let parent = document.querySelector("#parent");
+// let first = document.querySelector(".first");
 
-console.log(parent.children.length);
+// console.log(parent.children.length);
 
-console.log(parent.firstElementChild.textContent);
+// console.log(parent.firstElementChild.textContent);
 
-console.log(parent.lastElementChild.textContent);
+// console.log(parent.lastElementChild.textContent);
 
-console.log(first.parentElement.id);
+// console.log(first.parentElement.id);
 
-console.log(first.nextElementSibling.textContent);
+// console.log(first.nextElementSibling.textContent);
+
+
+// let parent = document.querySelector("#parent");
+// let first = document.querySelector(".first");
+// let second = document.querySelector(".second");
+
+
+// console.log(parent.firstElementChild.nextElementSibling.textContent);
+// console.log(second.previousElementSibling.textContent);
+// console.log(second.nextElementSibling.textContent);
+// console.log(parent.childNodes.length);
+
+
+// ? 9. Adding Elements : 
+// document.createElement('p')
+
+
+// let para1 = document.createElement("p");
+
+// para1.innerText= "i am red";
+// let body = document.querySelector("body");
+// body.append(para1);
+
+// para1.classList.add("red");
+
+// let h3 = document.createElement("h3");
+
+// h3.innerText = "I'm a blue h3";
+
+// body.append(h3);
+// h3.classList.add("blue");
+
+
+// let div = document.createElement("div");
+
+
+// let h1 = document.createElement("h1");
+// let para2 = document.createElement("para2");
+
+// h1.innerText = "I am inner div";
+// para2.innerText= "Me Too! ";
+
+// div.prepend(h1);
+// div.prepend(para2);
+
+// div.classList.add("div");
+
+// body.prepend(div);
+
+let para = document.createElement('p');
+para.innerText = "Practice DOM daily";
+
+let container = document.querySelector("#container");
+
+container.appendChild(para);
+let text = document.querySelector("p").remove();
 
 
 
+console.log(container.children.length);
+console.log(container.textContent);
