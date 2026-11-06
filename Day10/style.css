@@ -1,0 +1,20 @@
+/* ? Activity  */
+/* 
+div {
+    height: 100px;
+    width: 500px;
+    border: 1px solid black;
+    margin: auto;
+}
+body {
+    text-align: center  ;
+} */
+
+/* ? For Element */
+
+.box {
+   width: 100px; 
+   height: 100px;
+   background-color: pink;
+   border: 1px solid black;
+}
